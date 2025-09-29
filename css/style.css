@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #F0D9DE;
+    --primary-color-dark: #8C1642;
+    --secondary-color: #D9BAC0;
+    --white: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(to right bottom, #FFC4D4, #BF264F);
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 1300px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.links div {
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.links div:hover {
+    color: #8C1642;
+}
+
+.links div span {
+    font-size: 1.2rem;
+}
+
+.links .shopping_cart {
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-content: center;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    color: var(--primary-color-dark);
+    background-color: var(--white);
+}
+
+.content {
+    font-family: "Bricolage Grotesque", sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+    gap: 1rem;           /* spacing between image / header / featured / contact */
+    margin-top: 0.5rem;
+}
+
+.image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transform: rotate(-20deg);
+    animation: purse-animation 3s ease-in-out infinite;
+}
+
+/* Combined transform in keyframes preserves rotation + adds translateY */
+@keyframes purse-animation {
+    0%   { transform: rotate(-10deg) translateY(0); }
+    50%  { transform: rotate(-10deg) translateY(12px); }
+    100% { transform: rotate(-10deg) translateY(0); }
+}
+
+/* header text centered under the image */
+.header {
+    text-align: center;
+    margin-top: 0; /* * reset already clears default margins, but keep explicit */
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0;
+}
+
+.header p {
+    margin: 0;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.header p:hover {
+    color: #BDBDBD;
+}
+
+.featured_item {
+    margin-top: 30rem;
+    text-align: left;
+    position: absolute;
+    transform: rotate(-90deg);
+}
+
+.featured_item h4 {
+    font-family: "Cal Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--white); margin: 0; }
+
+.featured_item p {
+    color: #BF264F;
+    font-weight: 400;
+    margin: 0;
+}
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between; /* push left and right */
+    align-items: center;            /* vertical alignment */
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--white);
+    margin-top: 0.5rem;
+}
+
+.contact span {
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: #BF264F;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.socials span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.socials span:hover {
+    color: var(--secondary-color);
+}
+
+.slides {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.slides span {
+    font-size: 1rem;
+    font-weight: 400;
+}
